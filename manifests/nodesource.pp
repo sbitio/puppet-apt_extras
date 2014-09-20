@@ -5,7 +5,7 @@ class apt_extras::nodesource () {
 
   ensure_packages('apt-transport-https')
 
-  apt::key { "nodesource":
+  apt::key { 'nodesource':
     key        => "68576280",
     key_source => "https://deb.nodesource.com/gpgkey/nodesource.gpg.key",
     #require    => Package['apt-transport-https'],
@@ -15,6 +15,7 @@ class apt_extras::nodesource () {
     release           => $::lsbdistcodename,
     repos             => "main",
     required_packages => "debian-keyring debian-archive-keyring",
+    require           => Apt::Key['nodesource'],
   }
 
 }

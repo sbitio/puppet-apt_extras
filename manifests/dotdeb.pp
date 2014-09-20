@@ -11,6 +11,7 @@ class apt_extras::dotdeb () {
     release           => $::lsbdistcodename,
     repos             => "all",
     required_packages => "debian-keyring debian-archive-keyring",
+    require           => Apt::Key['dotdeb'],
   }
 
 }

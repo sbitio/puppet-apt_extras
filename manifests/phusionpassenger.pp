@@ -11,6 +11,7 @@ class apt_extras::phusionpassenger () {
     release           => $::lsbdistcodename,
     repos             => "main",
     required_packages => "debian-keyring debian-archive-keyring",
+    require           => Apt::Key['phusionpassenger'],
   }
 
 }
