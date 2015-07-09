@@ -5,7 +5,7 @@ class apt_extras::phusionpassenger {
   ensure_packages('apt-transport-https')
 
   apt::key { 'phusionpassenger':
-    key        => '561F9B9CAC40B2F7',
+    key        => '16378A33A6EF16762922526E561F9B9CAC40B2F7',
     key_server => 'keyserver.ubuntu.com',
   }
   apt::source { 'phusionpassenger':

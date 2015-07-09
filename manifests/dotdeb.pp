@@ -5,7 +5,7 @@ class apt_extras::dotdeb {
   Apt::Source <| title == 'dotdeb' |> -> Package <| |>
 
   apt::key { 'dotdeb':
-    key               => '89DF5277',
+    key               => '6572BBEF1B5FF28B28B706837E3F070089DF5277',
     key_source        => 'http://www.dotdeb.org/dotdeb.gpg',
   }
   apt::source { 'dotdeb':

@@ -9,7 +9,7 @@ class apt_extras::nodesource {
   ensure_packages('apt-transport-https')
 
   apt::key { 'nodesource':
-    key        => "68576280",
+    key        => '9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280',
     key_source => 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key',
     #require    => Package['apt-transport-https'],
   }
