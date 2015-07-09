@@ -1,4 +1,6 @@
-class apt_extras::backports () {
+# == Class: apt_extras::backports
+#
+class apt_extras::backports {
 #  apt::key { "backports":
 #    key_source        => "http://backports.debian.org/debian-backports/dists/squeeze-backports/Release.gpg",
 #  }
@@ -7,7 +9,7 @@ class apt_extras::backports () {
   Apt::Source <| title == 'backports' |> -> Package <| |>
 
   apt::source { 'backports':
-    location          => $::lsbdistcodename ? { 
+    location          => $::lsbdistcodename ? {
       squeeze => "http://backports.debian.org/debian-backports",
       default => "http://ftp.debian.org/debian/",
     },
@@ -15,4 +17,6 @@ class apt_extras::backports () {
     repos             => "main",
     required_packages => "debian-keyring debian-archive-keyring",
   }
+
 }
+

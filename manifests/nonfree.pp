@@ -1,4 +1,6 @@
-class apt_extras::nonfree () {
+# == Class: apt_extras::nonfree
+#
+class apt_extras::nonfree {
 
   Apt::Source <| title == 'non-free' |> -> Package <| |>
 
@@ -10,3 +12,4 @@ class apt_extras::nonfree () {
   }
 
 }
+

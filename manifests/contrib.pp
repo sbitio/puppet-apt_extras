@@ -1,4 +1,6 @@
-class apt_extras::contrib () {
+# == Class: apt_extras::contrib
+#
+class apt_extras::contrib {
 
   Apt::Source <| title == 'contrib' |> -> Package <| |>
 
@@ -10,3 +12,4 @@ class apt_extras::contrib () {
   }
 
 }
+

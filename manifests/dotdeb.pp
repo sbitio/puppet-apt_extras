@@ -1,4 +1,6 @@
-class apt_extras::dotdeb () {
+# == Class: apt_extras::dotdeb
+#
+class apt_extras::dotdeb {
 
   Apt::Source <| title == 'dotdeb' |> -> Package <| |>
 

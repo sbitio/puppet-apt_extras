@@ -1,4 +1,6 @@
-class apt_extras::phusionpassenger () {
+# == Class: apt_extras::phusionpassenger
+#
+class apt_extras::phusionpassenger {
 
   ensure_packages('apt-transport-https')
 
@@ -15,3 +17,4 @@ class apt_extras::phusionpassenger () {
   }
 
 }
+

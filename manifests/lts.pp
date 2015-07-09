@@ -1,4 +1,6 @@
-class apt_extras::lts () {
+# == Class: apt_extras::lts
+#
+class apt_extras::lts {
 
   Apt::Source <| title == 'lts' |> -> Package <| |>
 

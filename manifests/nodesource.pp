@@ -1,5 +1,8 @@
-class apt_extras::nodesource () {
-  # based on https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+# == Class: apt_extras::nodesource
+#
+# Based on https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+#
+class apt_extras::nodesource {
 
   Apt::Source <| title == 'nodesource' |> -> Class['nodejs']
 
