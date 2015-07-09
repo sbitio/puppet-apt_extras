@@ -9,10 +9,10 @@ class apt_extras::phusionpassenger {
     key_server => 'keyserver.ubuntu.com',
   }
   apt::source { 'phusionpassenger':
-    location          => "https://oss-binaries.phusionpassenger.com/apt/passenger",
+    location          => 'https://oss-binaries.phusionpassenger.com/apt/passenger',
     release           => $::lsbdistcodename,
-    repos             => "main",
-    required_packages => "debian-keyring debian-archive-keyring",
+    repos             => 'main',
+    required_packages => 'debian-keyring debian-archive-keyring',
     require           => Apt::Key['phusionpassenger'],
   }
 
