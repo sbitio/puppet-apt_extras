@@ -10,6 +10,7 @@ class apt_extras::lts {
       release           => "${::lsbdistcodename}-lts",
       repos             => 'main contrib non-free',
       required_packages => 'debian-keyring debian-archive-keyring',
+      notify            => Exec['apt-get-update'],
     }
   }
 
