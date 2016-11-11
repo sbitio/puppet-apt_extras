@@ -14,6 +14,7 @@ class apt_extras::dotdeb {
     repos             => 'all',
     required_packages => 'debian-keyring debian-archive-keyring',
     require           => Apt::Key['dotdeb'],
+    notify            => Exec['apt-get-update'],
   }
 
 }
