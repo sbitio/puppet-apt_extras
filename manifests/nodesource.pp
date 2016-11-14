@@ -19,7 +19,6 @@ class apt_extras::nodesource {
     repos             => 'main',
     required_packages => 'debian-keyring debian-archive-keyring',
     require           => Apt::Key['nodesource'],
-    notify            => Exec['apt-get-update'],
   }
 
 }

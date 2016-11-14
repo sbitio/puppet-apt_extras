@@ -16,7 +16,6 @@ class apt_extras::backports {
     release           => "${::lsbdistcodename}-backports",
     repos             => 'main',
     required_packages => 'debian-keyring debian-archive-keyring',
-    notify            => Exec['apt-get-update'],
   }
 
 }

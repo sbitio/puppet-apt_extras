@@ -14,7 +14,6 @@ class apt_extras::phusionpassenger {
     repos             => 'main',
     required_packages => 'debian-keyring debian-archive-keyring',
     require           => Apt::Key['phusionpassenger'],
-    notify            => Exec['apt-get-update'],
   }
 
 }

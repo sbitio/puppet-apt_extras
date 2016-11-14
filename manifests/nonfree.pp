@@ -9,7 +9,6 @@ class apt_extras::nonfree {
     release           => $::lsbdistcodename,
     repos             => 'non-free',
     required_packages => 'debian-keyring debian-archive-keyring',
-    notify            => Exec['apt-get-update'],
   }
 
 }
