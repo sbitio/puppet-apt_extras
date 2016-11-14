@@ -9,7 +9,6 @@ class apt_extras::contrib {
     release           => $::lsbdistcodename,
     repos             => 'contrib',
     required_packages => 'debian-keyring debian-archive-keyring',
-    notify            => Exec['apt-get-update'],
   }
 
 }
